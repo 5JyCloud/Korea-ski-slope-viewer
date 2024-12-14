@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 import webview
 
+# 무주 웹캡 실행 함수
 def muju_surlcheon():
     url = "http://www.mdysresort.com/guide/webcam_popup.asp?cam_num=05"
     webview.create_window('설천하우스', url)
@@ -13,6 +14,38 @@ def muju_connection():
 def muju_mansun():
     url = "http://www.mdysresort.com/guide/webcam_popup.asp?cam_num=01"
     webview.create_window('만선하우스', url)
+    webview.start()
+def muju_sundown():
+    url = "http://www.mdysresort.com/guide/webcam_popup.asp?cam_num=04"
+    webview.create_window('서역기행, 썬다운', url)
+    webview.start()
+def muju_hideyhouse():
+    url = "http://www.mdysresort.com/guide/webcam_popup.asp?cam_num=03"
+    webview.create_window('하이디하우스', url)
+    webview.start()
+def muju_mansuntop():
+    url = "http://www.mdysresort.com/guide/webcam_popup.asp?cam_num=02"
+    webview.create_window('만선봉 정상', url)
+    webview.start()
+def muju_silkroad():
+    url = "http://www.mdysresort.com/guide/webcam_popup.asp?cam_num=10"
+    webview.create_window('실크로드, 미뉴에트하단', url)
+    webview.start()
+def muju_polka():
+    url = "http://www.mdysresort.com/guide/webcam_popup.asp?cam_num=09"
+    webview.create_window('폴카', url)
+    webview.start()
+def muju_mozart():
+    url = "http://www.mdysresort.com/guide/webcam_popup.asp?cam_num=08"
+    webview.create_window('모차르트, 미뉴에트', url)
+    webview.start()
+def muju_surlcheon_t_s():
+    url = "http://www.mdysresort.com/guide/webcam_popup.asp?cam_num=06"
+    webview.create_window('설천상단슬로프', url)
+    webview.start()
+def muju_surlcheontop():
+    url = "http://www.mdysresort.com/guide/webcam_popup.asp?cam_num=07"
+    webview.create_window('설천봉 정상', url)
     webview.start()
 
 def open_muju():
@@ -35,6 +68,22 @@ def open_muju():
     button_webcam.place(relx=0.35, rely=0.73)
     button_webcam = tk.Button(new_window, text="만선하우스", command=muju_mansun)
     button_webcam.place(relx=0.53, rely=0.81)
+    button_webcam = tk.Button(new_window, text="서역기행, 썬다운", command=muju_sundown)
+    button_webcam.place(relx=0.77, rely=0.68)
+    button_webcam = tk.Button(new_window, text="하이디하우스", command=muju_hideyhouse)
+    button_webcam.place(relx=0.68, rely=0.52)
+    button_webcam = tk.Button(new_window, text="만선봉 정상", command=muju_mansuntop)
+    button_webcam.place(relx=0.6, rely=0.41)
+    button_webcam = tk.Button(new_window, text="실크로드, 미뉴에트하단", command=muju_silkroad)
+    button_webcam.place(relx=0.07, rely=0.45)
+    button_webcam = tk.Button(new_window, text="폴카", command=muju_polka)
+    button_webcam.place(relx=0.105, rely=0.38)
+    button_webcam = tk.Button(new_window, text="모차르트, 미뉴에트", command=muju_mozart)
+    button_webcam.place(relx=0.2, rely=0.29)
+    button_webcam = tk.Button(new_window, text="설천상단슬로프", command=muju_surlcheon_t_s)
+    button_webcam.place(relx=0.186, rely=0.18)
+    button_webcam = tk.Button(new_window, text="설천봉 정상", command=muju_surlcheontop)
+    button_webcam.place(relx=0.325, rely=0.115)
 
 # main 창 생성
 window = tk.Tk()
