@@ -52,84 +52,85 @@ def muju_surlcheontop():
 # 하이원 웹캠 실행 함수
 def high1_1():
     url = "http://www.high1.com/webcam/pop_webcam.do?ch=1"
-    webview.create_window('도도', url)
+    webview.create_window('제우스2 입구', url)
     webview.start()
 def high1_2():
     url = "http://www.high1.com/webcam/pop_webcam.do?ch=2"
-    webview.create_window('도도', url)
+    webview.create_window('헤라2 입구', url)
     webview.start()
 def high1_3():
     url = "http://www.high1.com/webcam/pop_webcam.do?ch=3"
-    webview.create_window('도도', url)
+    webview.create_window('하이원 탑', url)
     webview.start()
 def high1_4():
     url = "http://www.high1.com/webcam/pop_webcam.do?ch=4"
-    webview.create_window('도도', url)
+    webview.create_window('아테나1', url)
     webview.start()
 def high1_5():
     url = "http://www.high1.com/webcam/pop_webcam.do?ch=5"
-    webview.create_window('도도', url)
+    webview.create_window('마운틴 허브', url)
     webview.start()
 def high1_6():
     url = "http://www.high1.com/webcam/pop_webcam.do?ch=6"
-    webview.create_window('도도', url)
+    webview.create_window('아테나2', url)
     webview.start()
 def high1_7():
     url = "http://www.high1.com/webcam/pop_webcam.do?ch=7"
-    webview.create_window('도도', url)
+    webview.create_window('마운틴 베이스', url)
     webview.start()
 def high1_8():
     url = "http://www.high1.com/webcam/pop_webcam.do?ch=8"
-    webview.create_window('도도', url)
+    webview.create_window('아테나2 하단', url)
     webview.start()
 def high1_9():
     url = "http://www.high1.com/webcam/pop_webcam.do?ch=9"
-    webview.create_window('도도', url)
+    webview.create_window('빅토리아 상단', url)
     webview.start()
 def high1_10():
     url = "http://www.high1.com/webcam/pop_webcam.do?ch=10"
-    webview.create_window('도도', url)
+    webview.create_window('제우스2', url)
     webview.start()
 def high1_11():
     url = "http://www.high1.com/webcam/pop_webcam.do?ch=11"
-    webview.create_window('도도', url)
+    webview.create_window('밸리 허브', url)
     webview.start()
 def high1_12():
     url = "http://www.high1.com/webcam/pop_webcam.do?ch=12"
-    webview.create_window('도도', url)
+    webview.create_window('빅토리아1', url)
     webview.start()
 def high1_13():
     url = "http://www.high1.com/webcam/pop_webcam.do?ch=13"
-    webview.create_window('도도', url)
+    webview.create_window('제우스3', url)
     webview.start()
 def high1_14():
     url = "http://www.high1.com/webcam/pop_webcam.do?ch=14"
-    webview.create_window('도도', url)
+    webview.create_window('제우스3 중단부', url)
     webview.start()
 def high1_15():
     url = "http://www.high1.com/webcam/pop_webcam.do?ch=15"
-    webview.create_window('도도', url)
+    webview.create_window('아폴로4 중단부', url)
     webview.start()
 def high1_16():
     url = "http://www.high1.com/webcam/pop_webcam.do?ch=16"
-    webview.create_window('도도', url)
+    webview.create_window('아폴로 베이스', url)
     webview.start()
 def high1_17():
     url = "http://www.high1.com/webcam/pop_webcam.do?ch=17"
-    webview.create_window('도도', url)
+    webview.create_window('제우스3 하단', url)
     webview.start()
 def high1_18():
     url = "http://www.high1.com/webcam/pop_webcam.do?ch=18"
-    webview.create_window('도도', url)
+    webview.create_window('밸리 베이스', url)
     webview.start()
 
-# 무주 GUI
+# 무주 GUI 생성
 def open_muju():
     new_window = tk.Toplevel(window)
     new_window.geometry("1200x800")
+    new_window.resizable(False, False)
     new_window.title("무주 덕유산 리조트")
     
-    # 이미지 로드 및 표시
+    # 무주 리조트 이미지 로드 및 표시
     muju_photo = tk.PhotoImage(file="muju.png")
     image_label = tk.Label(new_window, image=muju_photo)
     image_label.pack(fill="both", expand=True)
@@ -161,13 +162,14 @@ def open_muju():
     button_webcam = tk.Button(new_window, text="설천봉 정상", command=muju_surlcheontop)
     button_webcam.place(relx=0.325, rely=0.115)
 
-# 하이원 GUI
+# 하이원 GUI 생성
 def open_high1():
     new_window = tk.Toplevel(window)
     new_window.geometry("1300x800")
+    new_window.resizable(False, False)
     new_window.title("하이원 리조트")
 
-    # 이미지 로드 및 표시
+    # 하이원 리조트 이미지 로드 및 표시
     high1_photo = tk.PhotoImage(file="high1.png")
     image_label = tk.Label(new_window, image=high1_photo)
     image_label.pack(fill="both", expand=True)
@@ -212,17 +214,17 @@ def open_high1():
     button_webcam = tk.Button(new_window, text="8", command=high1_8)
     button_webcam.place(relx=0.701, rely=0.74)
     
-# main GUI 생성
+# 메인 GUI 생성
 window = tk.Tk()
 window.geometry("300x300+100+100")
 window.resizable(False, False)
 window.title("Slope Viewer")
 
-# 버튼 추가
+# 무주 덕유산 리조트, 하이원 리조트 버튼 생성
 button = ttk.Button(window, text="무주 덕유산 리조트", command=open_muju)
 button.pack(pady=20)
 button = ttk.Button(window, text="하이원 리조트", command=open_high1)
 button.pack(pady=20)
 
-# Tkinter 이벤트 루프 시작
+# Tkinter 이벤트 루프를 시작해 GUI 실행
 window.mainloop()
